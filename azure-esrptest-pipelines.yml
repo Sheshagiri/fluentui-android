@@ -24,15 +24,3 @@ jobs:
         javaHomeOption: 'JDKVersion'
         jdkVersionOption: '$(jdkVersion)'
         options: '-PGPGSigningKeyID=$(gpgSignKey) -PGPGSigningPassword=$(gpgSignPassword) -PSigningSecretKeyRingFile=$(gpgSecretFileParentPath)'
-    
-    - task: EsrpRelease@2
-      inputs:
-        ConnectedServiceName: 'ESRP_Release_Connection'
-        Intent: 'PackageDistribution'
-        ContentType: 'Maven'
-        PackageLocation: '$(build.sourcesdirectory)/build/repo/com/test/fluentui'
-        Owners: 'pyeruva@microsoft.com'
-        Approvers: 'pyeruva@microsoft.com'
-        ServiceEndpointUrl: 'https://api.esrp.microsoft.com'
-        MainPublisher: 'ESRPRELPACMAN'
-        DomainTenantId: '72f988bf-86f1-41af-91ab-2d7cd011db47'
