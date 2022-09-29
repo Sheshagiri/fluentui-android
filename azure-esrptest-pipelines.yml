@@ -1,5 +1,6 @@
 jobs:
 
+
   - job: TestBuildPublish
     pool:
       vmImage: ubuntu-latest
@@ -24,3 +25,8 @@ jobs:
         javaHomeOption: 'JDKVersion'
         jdkVersionOption: '$(jdkVersion)'
         options: '-PGPGSigningKeyID=$(gpgSignKey) -PGPGSigningPassword=$(gpgSignPassword) -PSigningSecretKeyRingFile=$(gpgSecretFileParentPath)'
+        
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(Pipeline.Workspace)'
+        publishLocation: 'pipeline'
