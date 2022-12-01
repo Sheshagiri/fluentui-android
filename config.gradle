@@ -11,7 +11,7 @@
  * and fluentui_drawer' current version is 0.0.2, both fluentui_listitem and
  * fluentui_drawer and FluentUI should increment their respective version ids
   */
-project.ext.fluentui_calendar_versionid = '0.0.26'
+project.ext.fluentui_calendar_versionid = '0.0.27'
 project.ext.fluentui_controls_versionid = '0.1.4'
 project.ext.fluentui_core_versionid = '0.1.7'
 project.ext.fluentui_listitem_versionid = '0.0.25'
